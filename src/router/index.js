@@ -21,6 +21,17 @@ export default new Router({
       path: '/personalInfo',
       name: 'PersonalInfo',
       component: () => import('@/components/personalInfo')
+    },
+    {
+      path: '/',
+      redirect: '/index',
+      children: [
+        {
+          path: '/index',
+          name: 'Index',
+          component: () => import('@/components/index.vue')
+        }
+      ]
     }
   ]
 })
