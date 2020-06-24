@@ -22,10 +22,10 @@
         </div>
         <div class="btn_box">
           <div class="bug_box" @click="bugClick">
-            <div style="margin-top: 8px;">立即购买</div>
+            <div style="margin-top: 8px; cursor: pointer;">立即购买</div>
           </div>
           <div class="add_box" @click="addClick">
-            <div style="margin-top: 8px;">加入购物车</div>
+            <div style="margin-top: 8px; cursor: pointer;">加入购物车</div>
           </div>
         </div>
       </div>
