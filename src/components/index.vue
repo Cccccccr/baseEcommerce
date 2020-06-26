@@ -6,6 +6,9 @@
         <span style="margin-left: 3px;" class="goPersonalInfo" @click="goPersonelInfo">前往个人中心</span>
       </div>
     </div>
+    <el-input placeholder="请输入内容搜索商品" v-model="searchValue" class="search_input">
+      <el-button slot="append" icon="el-icon-search" class="search_text" @click="searchClick">搜索</el-button>
+    </el-input>
     <div class="header">
       <el-tabs v-model="activeName" @tab-click="handleClick">
         <el-tab-pane v-for="item in tabsList" :label="item.lable" :name="item.name" :key="item.lable"></el-tab-pane>
@@ -64,7 +67,8 @@ export default {
         {name: '商品6', price: 799},
         {name: '商品7', price: 29.9},
         {name: '商品8', price: 29.9}
-      ]
+      ],
+      searchValue: ''
     }
   },
   created () {
@@ -167,5 +171,17 @@ export default {
   margin-top: 20px;
   float: left;
   margin-left: 10px;
+}
+.search_input {
+  width: 600px;
+}
+.search_text:hover {
+  background-color: #ccc;
+}
+.search_text:active {
+  background-color: rgb(155, 150, 150);
+}
+.search_text {
+  border-radius: 0px;
 }
 </style>
