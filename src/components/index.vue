@@ -106,6 +106,13 @@ export default {
           goodData: data
         }
       })
+    },
+    searchClick () {
+      this.$message({
+        type: 'info',
+        duration: 2000,
+        message: '搜索了' + (this.searchValue ? this.searchValue : '寂寞')
+      })
     }
   }
 }
